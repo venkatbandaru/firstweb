@@ -1,0 +1,25 @@
+<html>
+<body>
+  <script>
+var number = [];
+
+function checkNumber(num1, num2) {
+    return function(element) {
+        return element != num1 && element != num2 ;
+    }
+}
+
+function destroyer(arr) {
+  // Remove all the values
+
+var array = arguments[0];
+array =  array.filter(checkNumber(arguments[1], arguments[2]));
+console.log(array);
+  return array;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+  </script>
+</body>
+</html>
